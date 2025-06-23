@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <script>
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        location.replace(redirect);
+      }
+    </script>
+  </body>
+</html>
